@@ -19,6 +19,11 @@ class EmployeeController {
     this.repository = repository;
   }
 
+  @GetMapping("/")
+  String sayHello() {
+    return "Hi, I'm working!";
+  }
+
   @GetMapping("/employees")
   List<Employee> all() {
     return repository.findAll();
